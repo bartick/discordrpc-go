@@ -12,6 +12,7 @@ import (
 	winio "github.com/Microsoft/go-winio"
 )
 
+// Check for named pipe
 func namedPipe(id int) (net.Conn, error) {
 	var d = time.Duration(2 * time.Second)
 	sock, err := winio.DialPipe(`\\.\pipe\discord-ipc-`+strconv.Itoa(id), &d)
