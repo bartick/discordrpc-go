@@ -13,7 +13,8 @@ import (
 )
 
 func namedPipe(id int) (net.Conn, error) {
-	sock, err := winio.DialPipe(`\\.\pipe\discord-ipc-`+strconv.Itoa(id), time.Second*2)
+	var d = time.Duration(2 * time.Second)
+	sock, err := winio.DialPipe(`\\.\pipe\discord-ipc-`+strconv.Itoa(id), &d)
 	if err != nil {
 		if id < 10 {
 			return namedPipe(id + 1)
