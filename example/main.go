@@ -11,7 +11,7 @@ func main() {
 	var err error
 	var answer string
 	conn := rpc.RPC{
-		ClientID: "<PUT YOUR CLIEND ID FROM DISCORD DEVELOPERS PORTAL>",
+		ClientID: "<PUT YOUR CLIENT ID FROM DISCORD DEVELOPERS PORTAL>",
 	}
 	_, err = conn.Login()
 	if err != nil {
