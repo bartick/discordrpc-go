@@ -3,7 +3,7 @@
 
 ## Usage
 
-You need to create a client. 
+You need to create a client.     
 If you don't know how to get your client Id check [this](./GET_APP_ID.md)
 ```go
 conn := rpc.RPC{
